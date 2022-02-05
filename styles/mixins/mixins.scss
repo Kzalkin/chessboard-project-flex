@@ -1,0 +1,17 @@
+@use '../abstracts/sizes' as s;
+
+@mixin board-letter {
+    width: s.$cell-size;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: s.$letter-number-font-size;
+}
+
+@mixin board-number {
+    height: s.$center-board-size;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: s.$letter-number-font-size;
+}

@@ -1,0 +1,101 @@
+body {
+  height: 95vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.chess-board {
+  display: flex;
+  flex-wrap: wrap;
+  width: 40vw;
+  height: 40vw;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+}
+.chess-board .top-letter-board {
+  width: 100%;
+  height: 6.25%;
+  display: flex;
+  flex-direction: row;
+  background-color: gray;
+}
+.chess-board .top-letter-board .white-space {
+  width: 6.25%;
+}
+.chess-board .top-letter-board .board-letter {
+  width: 10.9375%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2vw;
+}
+.chess-board .left-number-board {
+  width: 6.25%;
+  height: 87.5%;
+  display: flex;
+  flex-direction: column;
+  background-color: gray;
+}
+.chess-board .left-number-board .number-board {
+  height: 87.5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2vw;
+}
+.chess-board .center-board {
+  width: 87.5%;
+  height: 87.5%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.chess-board .center-board .board-cell {
+  width: 12.5%;
+  height: 12.5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4vw;
+}
+.chess-board .right-number-board {
+  width: 6.25%;
+  display: flex;
+  flex-direction: column;
+  background-color: gray;
+}
+.chess-board .right-number-board .number-board {
+  height: 87.5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2vw;
+}
+.chess-board .bottom-letter-board {
+  height: 6.25%;
+  width: 100%;
+  display: flex;
+  background-color: gray;
+}
+.chess-board .bottom-letter-board .white-space {
+  width: 6.25%;
+}
+.chess-board .bottom-letter-board .board-letter {
+  width: 10.9375%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2vw;
+}
+
+.board-cell:nth-child(-2n+7),
+.board-cell:nth-child(8) ~ .board-cell:nth-child(-2n+16),
+.board-cell:nth-child(16) ~ .board-cell:nth-child(-2n+23),
+.board-cell:nth-child(24) ~ .board-cell:nth-child(-2n+32),
+.board-cell:nth-child(32) ~ .board-cell:nth-child(-2n+39),
+.board-cell:nth-child(40) ~ .board-cell:nth-child(-2n+48),
+.board-cell:nth-child(48) ~ .board-cell:nth-child(-2n+55),
+.board-cell:nth-child(56) ~ .board-cell:nth-child(-2n+64) {
+  background-color: rgba(128, 128, 128, 0.445);
+}
+
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,93 @@
+@use '../abstracts/sizes' as s;
+@use '../mixins/mixins' as m;
+
+.chess-board {
+
+    display: flex;
+    flex-wrap: wrap;
+    width: s.$board-width-height;
+    height: s.$board-width-height;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+
+    .top-letter-board {
+        width: 100%;
+        height: s.$letter-number-cell-size;
+        display: flex;
+        flex-direction: row;
+        background-color: gray;
+
+        .white-space {
+            width: s.$letter-number-cell-size;
+        }
+
+        .board-letter {
+            @include m.board-letter;
+        }
+    }
+
+    .left-number-board {
+        width: s.$letter-number-cell-size;
+        height: s.$center-board-size;
+        display: flex;
+        flex-direction: column;
+        background-color: gray;
+
+        .number-board {
+            @include m.board-number;
+        }
+    }
+
+    .center-board {
+        width: s.$center-board-size;
+        height: s.$center-board-size;
+        display: flex;
+        flex-wrap: wrap;
+
+        .board-cell {
+            width: s.$center-board-cell-size;
+            height: s.$center-board-cell-size;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: s.$font-size;
+        }
+    }
+
+    .right-number-board {
+        width: s.$letter-number-cell-size;
+        display: flex;
+        flex-direction: column;
+        background-color: gray;
+        
+        .number-board {
+            @include m.board-number;
+        }
+    }
+
+    .bottom-letter-board {
+        height: s.$letter-number-cell-size;
+        width: 100%;
+        display: flex;
+        background-color: gray;
+        
+        .white-space {
+            width: s.$letter-number-cell-size;
+        }
+
+        .board-letter {
+            @include m.board-letter
+        }
+    }
+}
+
+
+.board-cell:nth-child(-2n+7), 
+.board-cell:nth-child(8) ~ .board-cell:nth-child(-2n+16), 
+.board-cell:nth-child(16) ~ .board-cell:nth-child(-2n+23),
+.board-cell:nth-child(24) ~ .board-cell:nth-child(-2n+32),
+.board-cell:nth-child(32) ~ .board-cell:nth-child(-2n+39),
+.board-cell:nth-child(40) ~ .board-cell:nth-child(-2n+48),
+.board-cell:nth-child(48) ~ .board-cell:nth-child(-2n+55),
+.board-cell:nth-child(56) ~ .board-cell:nth-child(-2n+64){
+    background-color: rgba(128, 128, 128, 0.445);
+}       
